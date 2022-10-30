@@ -16,7 +16,7 @@ while True:
     time.sleep(1)
     count += 1
     current_time = datetime.datetime.now()
-    key = f'{current_time.hour:02d}:00'
+    key = f'{current_time.hour:02d}:{current_time.minute:02d}'
 
     if old_key != key:
         old_key = key
