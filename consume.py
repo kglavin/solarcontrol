@@ -25,6 +25,7 @@ while True:
     if count > 47:
         count = 0
         with open('gti-1/gti-1.json', 'r') as f:
+            print('re-reading the file')
             sch = json.loads(f.read())
 
 
