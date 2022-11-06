@@ -12,9 +12,14 @@ print(sch)
 old_key = ""
 count = 0
 while True:
-    time.sleep(17)
+    current_time = datetime.datetime.now()
+    print(current_time.second)
+    sleep_time = (65 - current_time.second )
+    print("sleep_time: ", sleep_time)
+    time.sleep(sleep_time)
     count += 1
     current_time = datetime.datetime.now()
+    print("now secs: ", current_time.second)
     key = f'{current_time.hour:02d}:{current_time.minute:02d}'
     if sch.get(key,None) is not None:
         if old_key != key:
